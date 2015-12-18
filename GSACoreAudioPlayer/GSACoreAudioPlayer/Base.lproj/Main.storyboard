@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZG-cw-jf9" customClass="GSASpectrumView">
+                                <rect key="frame" x="0.0" y="150" width="600" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="6zN-uR-1ZQ"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8dV-ft-lWy">
+                                <rect key="frame" x="290" y="260" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nef-Tj-Nht">
+                                <rect key="frame" x="277" y="398" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GWS-8u-MnT"/>
+                                    <constraint firstAttribute="width" constant="46" id="VCy-RG-xeE"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNO-MR-PdN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8dV-ft-lWy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="3pP-86-ZKF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aZG-cw-jf9" secondAttribute="trailing" constant="-20" id="6at-Vn-Xxi"/>
+                            <constraint firstItem="aZG-cw-jf9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="AVa-qx-fm4"/>
+                            <constraint firstItem="aZG-cw-jf9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Sx6-T7-3wq"/>
+                            <constraint firstItem="nef-Tj-Nht" firstAttribute="top" secondItem="aZG-cw-jf9" secondAttribute="bottom" constant="8" id="T1T-Y2-ebw"/>
+                            <constraint firstItem="nef-Tj-Nht" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lFc-g6-qWw"/>
+                            <constraint firstItem="8dV-ft-lWy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ns2-Ra-RSk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioSpectrumView" destination="aZG-cw-jf9" id="97R-Qh-OZ1"/>
+                        <outlet property="mediaPickerActivityIndicator" destination="8dV-ft-lWy" id="8e9-fm-YnP"/>
+                        <outlet property="playStopButton" destination="nef-Tj-Nht" id="e2G-a8-6IQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="237"/>
+        </scene>
+    </scenes>
+</document>
