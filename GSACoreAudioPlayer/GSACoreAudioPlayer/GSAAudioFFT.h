@@ -34,12 +34,6 @@
 
 /**
  Initialize a class instance
- @return The initialized object
- */
-- (instancetype) init;
-
-/**
- Initialize a class instance
  @param bufferSize The size of the buffer
  @return The initialized object
  */
